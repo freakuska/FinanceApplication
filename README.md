@@ -1,4 +1,4 @@
-# FinanceApp - Приложение для управления финансами
+# [**FinanceApp**](https://github.com/freakuska/FinanceAppNNwe) - Приложение для управления финансами
 
 ## Описание проекта
 
