@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat Code Coverage">
+        <Configuration>
+          <Format>cobertura</Format>
+          <ExcludeByFile>
+            **/FinanceApp.Infrastructure/Migrations/*.cs,**/FinanceApp.Api/Program.cs,**/FinanceApp.Web/Program.cs,**/FinanceApp.Web/Views/**/*.cshtml,**/FinanceApp.Infrastructure/Extensions/ModelBuilderExtensions.cs
+          </ExcludeByFile>
+          <Exclude>[FinanceApp.Infrastructure.Migrations*]*,[*]Program,[AspNetCoreGeneratedDocument*]*</Exclude>
+          <ExcludeByAttribute>
+            ExcludeFromCodeCoverageAttribute
+          </ExcludeByAttribute>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

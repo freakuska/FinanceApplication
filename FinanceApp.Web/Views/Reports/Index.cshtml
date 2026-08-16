@@ -1,0 +1,220 @@
+@{
+    ViewData["Title"] = "Отчёты";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section Styles {
+    <link href="~/src/assets/css/light/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <link href="~/src/assets/css/dark/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <link href="~/src/plugins/src/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/src/apex/apexcharts.css">
+    <link href="~/css/custom-reports.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="page-meta">
+    <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/Dashboard">Дашборд</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Отчёты</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row layout-top-spacing">
+
+    <!-- Фильтры-чипсы -->
+    <div class="col-12 layout-spacing">
+        <div class="report-filters">
+            <div class="d-flex flex-wrap align-items-center gap-2">
+                <div class="filter-chip-group">
+                    <select id="report-type" class="form-select form-select-sm filter-chip">
+                        <option value="monthly">Месячный</option>
+                        <option value="yearly">Годовой</option>
+                        <option value="category">По категориям</option>
+                        <option value="trend">Тренды</option>
+                    </select>
+                </div>
+
+                <div class="filter-chip-group" id="year-selector-wrap">
+                    <select id="report-year" class="form-select form-select-sm filter-chip"></select>
+                </div>
+
+                <div class="filter-chip-group" id="month-selector-wrap">
+                    <select id="report-month" class="form-select form-select-sm filter-chip">
+                        <option value="1">Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7">Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
+                    </select>
+                </div>
+
+                <div class="filter-chip-group" id="date-from-wrap" style="display:none;">
+                    <input type="text" id="report-date-from" class="form-control form-control-sm filter-chip flatpickr" placeholder="Дата от">
+                </div>
+                <div class="filter-chip-group" id="date-to-wrap" style="display:none;">
+                    <input type="text" id="report-date-to" class="form-control form-control-sm filter-chip flatpickr" placeholder="Дата до">
+                </div>
+                <div class="filter-chip-group" id="group-by-wrap" style="display:none;">
+                    <select id="report-group-by" class="form-select form-select-sm filter-chip">
+                        <option value="day">По дням</option>
+                        <option value="week">По неделям</option>
+                        <option value="month">По месяцам</option>
+                    </select>
+                </div>
+
+                <div class="filter-chip-group">
+                    <select id="report-tag" class="form-select form-select-sm filter-chip">
+                        <option value="">Все категории</option>
+                    </select>
+                </div>
+
+                <button id="load-report-btn" class="btn btn-primary btn-sm">
+                    <i class="fas fa-sync-alt me-1"></i> Загрузить
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Сводные карточки -->
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-four summary-card summary-card--income">
+            <div class="widget-content">
+                <div class="w-header">
+                    <div class="w-info">
+                        <h6 class="value">Доходы</h6>
+                    </div>
+                </div>
+                <div class="w-content">
+                    <div class="w-info">
+                        <p class="value summary-amount" id="summary-income">— ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-four summary-card summary-card--expense">
+            <div class="widget-content">
+                <div class="w-header">
+                    <div class="w-info">
+                        <h6 class="value">Расходы</h6>
+                    </div>
+                </div>
+                <div class="w-content">
+                    <div class="w-info">
+                        <p class="value summary-amount" id="summary-expense">— ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-four summary-card summary-card--balance">
+            <div class="widget-content">
+                <div class="w-header">
+                    <div class="w-info">
+                        <h6 class="value">Баланс</h6>
+                    </div>
+                </div>
+                <div class="w-content">
+                    <div class="w-info">
+                        <p class="value summary-amount" id="summary-balance">— ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Круговая диаграмма категорий (по центру, крупная) -->
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-chart-two">
+            <div class="widget-heading">
+                <div>
+                    <h5 id="donut-chart-title">Категории расходов</h5>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="category-donut-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Список категорий -->
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-chart-two">
+            <div class="widget-heading">
+                <div>
+                    <h5>Расходы по категориям</h5>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="category-list" class="category-list">
+                    <div class="text-center p-4 text-muted">Нет данных по категориям</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной график -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-chart-two">
+            <div class="widget-heading">
+                <div>
+                    <h5 id="main-chart-title">Динамика</h5>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="main-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Таблица детализации -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-table-two">
+            <div class="widget-heading">
+                <h5 id="detail-table-title">Детализация</h5>
+                <div class="ms-auto d-flex gap-2">
+                    <button id="export-csv-btn" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-file-csv me-1"></i> CSV
+                    </button>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead id="detail-table-head">
+                            <tr>
+                                <th>Период</th>
+                                <th>Доходы</th>
+                                <th>Расходы</th>
+                                <th>Баланс</th>
+                            </tr>
+                        </thead>
+                        <tbody id="detail-table-body">
+                            <tr>
+                                <td colspan="4" class="text-center text-muted">Выберите параметры и нажмите «Загрузить»</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/src/plugins/src/apex/apexcharts.min.js"></script>
+    <script src="~/src/plugins/src/flatpickr/flatpickr.js"></script>
+    <script src="~/src/plugins/src/flatpickr/ru.js"></script>
+    <script src="~/js/app/reports.js"></script>
+}

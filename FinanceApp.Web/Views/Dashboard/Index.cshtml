@@ -1,0 +1,425 @@
+@{
+    ViewData["Title"] = "Дашборд";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section Styles {
+    <link href="~/src/assets/css/light/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <link href="~/src/assets/css/dark/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <link href="~/src/plugins/src/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="~/css/custom-operations.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="page-meta">
+    <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Дашборд</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row layout-top-spacing">
+
+    <!-- Статистика -->
+    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-four">
+            <div class="widget-content">
+                <div class="w-header">
+                    <div class="w-info">
+                        <h6 class="value">Доходы</h6>
+                    </div>
+                    <div class="task-action">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="expenses" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-content">
+                    <div class="w-info">
+                        <p class="value" id="total-income">0 ₽</p>
+                    </div>
+                </div>
+
+                <div class="w-progress-stats">
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="">
+                        <div class="w-icon">
+                            <p>Текущий период</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-four">
+            <div class="widget-content">
+                <div class="w-header">
+                    <div class="w-info">
+                        <h6 class="value">Расходы</h6>
+                    </div>
+                    <div class="task-action">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="income" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-content">
+                    <div class="w-info">
+                        <p class="value" id="total-expense">0 ₽</p>
+                    </div>
+                </div>
+
+                <div class="w-progress-stats">
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="">
+                        <div class="w-icon">
+                            <p>Текущий период</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-four">
+            <div class="widget-content">
+                <div class="w-header">
+                    <div class="w-info">
+                        <h6 class="value">Баланс</h6>
+                    </div>
+                    <div class="task-action">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="balance" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-content">
+                    <div class="w-info">
+                        <p class="value" id="total-balance">0 ₽</p>
+                    </div>
+                </div>
+
+                <div class="w-progress-stats">
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="">
+                        <div class="w-icon">
+                            <p>Итоговая разница</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Форма добавления операции -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-one">
+            <div class="widget-content p-4">
+                <div class="media">
+                    <div class="w-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                    </div>
+                    <div class="media-body">
+                        <h6>Добавить операцию</h6>
+                    </div>
+                </div>
+
+                <form id="operation-form">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group mb-4">
+                                <label for="operation-type">Тип</label>
+                                <select id="operation-type" class="form-select" required>
+                                    <option value="0">Доход</option>
+                                    <option value="1">Расход</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-4">
+                                <label for="operation-amount">Сумма</label>
+                                <input type="number" id="operation-amount" class="form-control" step="0.01" placeholder="1000" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-4">
+                                <label for="operation-payment">Способ оплаты</label>
+                                <select id="operation-payment" class="form-select" required>
+                                    <option value="0">Наличные</option>
+                                    <option value="1">Карта</option>
+                                    <option value="2">Банковский перевод</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-4">
+                                <label for="operation-date">Дата</label>
+                                <input type="date" id="operation-date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-4">
+                                <label for="operation-description">Описание</label>
+                                <input type="text" id="operation-description" class="form-control" placeholder="Зарплата, продукты, и т.д.">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-4">
+                                <label for="operation-tag">Категория</label>
+                                <select id="operation-tag" class="form-select">
+                                    <option value="">Без категории</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-plus me-2"></i>
+                                Добавить
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="cancel-edit-btn" style="display: none;">
+                                <i class="fas fa-times me-2"></i>
+                                Отменить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Быстрые действия (шаблоны операций) -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-card-one">
+            <div class="widget-content p-4">
+                <div class="media mb-3">
+                    <div class="w-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <div class="media-body">
+                        <h6>Быстрые действия</h6>
+                    </div>
+                </div>
+                <div class="row g-3" id="quick-templates-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Список операций -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+        <div class="widget widget-table-two">
+            <div class="widget-heading p-4">
+                <h5 class="">Последние операции</h5>
+            </div>
+
+            <div class="widget-content">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><div class="th-content">Дата</div></th>
+                                <th><div class="th-content">Тип</div></th>
+                                <th><div class="th-content">Описание</div></th>
+                                <th><div class="th-content">Способ</div></th>
+                                <th><div class="th-content th-heading">Сумма</div></th>
+                                <th><div class="th-content">Действия</div></th>
+                            </tr>
+                        </thead>
+                        <tbody id="operations-list">
+                            <tr>
+                                <td colspan="6" class="text-center">Загрузка...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Модальное окно создания шаблона -->
+<div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="templateModalLabel">Новый шаблон операции</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="template-form">
+                    <div class="form-group mb-3">
+                        <label for="tpl-name" class="form-label">Название шаблона</label>
+                        <input type="text" id="tpl-name" class="form-control" placeholder="Например: Продукты" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="tpl-type" class="form-label">Тип</label>
+                                <select id="tpl-type" class="form-select" required>
+                                    <option value="0">Доход</option>
+                                    <option value="1" selected>Расход</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="tpl-amount" class="form-label">Сумма</label>
+                                <input type="number" id="tpl-amount" class="form-control" step="0.01" placeholder="3000" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="tpl-payment" class="form-label">Способ оплаты</label>
+                                <select id="tpl-payment" class="form-select">
+                                    <option value="0">Наличные</option>
+                                    <option value="1" selected>Карта</option>
+                                    <option value="2">Банковский перевод</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="tpl-tag" class="form-label">Категория</label>
+                                <select id="tpl-tag" class="form-select">
+                                    <option value="">Без категории</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="tpl-description" class="form-label">Описание</label>
+                        <input type="text" id="tpl-description" class="form-control" placeholder="Необязательное описание">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-success" id="save-template-btn">
+                    <i class="fas fa-check me-2"></i>Сохранить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно редактирования операции -->
+<div class="modal fade" id="editOperationModal" tabindex="-1" role="dialog" aria-labelledby="editOperationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editOperationModalLabel">Редактировать операцию</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-operation-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="edit-operation-type">Тип операции</label>
+                                <select id="edit-operation-type" class="form-select" required>
+                                    <option value="0">Доход</option>
+                                    <option value="1">Расход</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="edit-operation-amount">Сумма</label>
+                                <input type="number" id="edit-operation-amount" class="form-control" step="0.01" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="edit-operation-payment">Способ оплаты</label>
+                                <select id="edit-operation-payment" class="form-select" required>
+                                    <option value="0">Наличные</option>
+                                    <option value="1">Карта</option>
+                                    <option value="2">Банковский перевод</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="edit-operation-date">Дата операции</label>
+                                <input type="date" id="edit-operation-date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="edit-operation-description">Описание</label>
+                                <input type="text" id="edit-operation-description" class="form-control" placeholder="Описание операции">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="edit-operation-notes">Заметки</label>
+                                <textarea id="edit-operation-notes" class="form-control" rows="3" placeholder="Дополнительная информация"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="edit-operation-tag">Категория</label>
+                                <select id="edit-operation-tag" class="form-select">
+                                    <option value="">Без категории</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-2"></i>
+                    Отмена
+                </button>
+                <button type="button" class="btn btn-danger" id="delete-operation-modal-btn">
+                    <i class="fas fa-trash me-2"></i>
+                    Удалить
+                </button>
+                <button type="button" class="btn btn-success" id="save-operation-modal-btn">
+                    <i class="fas fa-check me-2"></i>
+                    Сохранить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/src/plugins/src/flatpickr/flatpickr.js"></script>
+    <script src="~/js/app/config.js"></script>
+    <script src="~/js/app/dashboard.js"></script>
+}

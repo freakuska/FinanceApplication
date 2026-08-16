@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-06-09T00:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="software_architecture_robot" name="Схема программной архитектуры">
+    <mxGraphModel dx="1600" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1650" pageHeight="1020" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0b4db3;strokeWidth=2;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="10" y="55" width="1205" height="735" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0b4db3;strokeWidth=2;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="1225" y="55" width="390" height="735" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0b4db3;strokeWidth=2;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="10" y="800" width="1605" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="&lt;b&gt;КАРТИНКА 7 ИЗ 8&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0b4db3;strokeWidth=2;arcSize=8;fontFamily=Arial;fontSize=22;fontColor=#0b4db3;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="8" width="240" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="СХЕМА ПРОГРАММНОЙ АРХИТЕКТУРЫ СИСТЕМЫ УПРАВЛЕНИЯ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=28;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="5" width="820" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="ВЕРХНИЙ УРОВЕНЬ (СИСТЕМА РОБОТА)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=18;fontColor=#0b4db3;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="70" width="430" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#0b4db3&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0b4db3&quot;&gt;&lt;b&gt;①&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;robot_description&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;URDF / Xacro модель&lt;br&gt;робота&lt;br&gt;&lt;br&gt;&lt;b&gt;robot.urdf.xacro&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fbff;strokeColor=#0b4db3;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="105" width="190" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#0b4db3&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0b4db3&quot;&gt;&lt;b&gt;②&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;robot_gazebo&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Моделирование&lt;br&gt;в Gazebo&lt;br&gt;&lt;br&gt;▣&amp;nbsp; Gazebo&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fbff;strokeColor=#0b4db3;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="290" y="105" width="180" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#0b4db3&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0b4db3&quot;&gt;&lt;b&gt;③&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;ros2_control&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;ros2_control&lt;br&gt;контроллеры&lt;br&gt;и интерфейсы&lt;br&gt;&lt;br&gt;&lt;b&gt;Joint State&lt;br&gt;Controller&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fbff;strokeColor=#0b4db3;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="570" y="105" width="180" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#0b4db3&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0b4db3&quot;&gt;&lt;b&gt;④&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;robot_arm_controller&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Управляющий пакет&lt;br&gt;роботом и захватом&lt;br&gt;(ROS 2)&lt;br&gt;&lt;br&gt;Python&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fbff;strokeColor=#0b4db3;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="865" y="105" width="210" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="описание&lt;br&gt;модели" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="8" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="состояния&lt;br&gt;суставов,&lt;br&gt;сенсоры" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="9" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="команды&lt;br&gt;двигателям" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="10" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="команды&lt;br&gt;движения" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="10" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="статусы,&lt;br&gt;обратная связь" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="11" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=2;arcSize=3;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry x="30" y="270" width="1155" height="380" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="ВНУТРЕННЯЯ СТРУКТУРА ПАКЕТА robot_arm_controller" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=18;fontColor=#6f2dbd;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="272" width="520" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.1&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;app.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Главный модуль&lt;br&gt;приложения&lt;br&gt;ROS 2 узел&lt;br&gt;(rclpy)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="55" y="310" width="180" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.2&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;robot_bridge.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Связь с ros2_control&lt;br&gt;Публикация команд&lt;br&gt;Подписка на состояния&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="275" y="310" width="215" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.3&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;robot_model.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Модель робота&lt;br&gt;(параметры DH,&lt;br&gt;границы, кинематика)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="540" y="310" width="215" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.4&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;urdf_kinematics.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;FK / IK&lt;br&gt;Прямая и обратная&lt;br&gt;кинематика&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="810" y="310" width="205" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.5&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;motion_controller.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Планирование и&lt;br&gt;выполнение движений&lt;br&gt;(P2P, траектории)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="55" y="450" width="210" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.6&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;gripper_controller.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Управление захватом&lt;br&gt;(открыть / закрыть,&lt;br&gt;проверка состояния)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="305" y="450" width="220" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.7&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;program_executor.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;Выполнение программ&lt;br&gt;(загрузка, запуск,&lt;br&gt;пошаговое выполнение)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="570" y="450" width="230" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.8&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;manual_control_ui.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;GUI ручного&lt;br&gt;управления&lt;br&gt;(джойстик, кнопки)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="850" y="450" width="230" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.9&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;program_editor_ui.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;GUI редактора программ&lt;br&gt;(создание, редактирование&lt;br&gt;движений и команд)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="590" width="250" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;span style=&quot;font-size:15px;color:#6f2dbd&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;&lt;b&gt;4.10&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;program_manager_ui.py&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;font-size:14px;line-height:1.25&quot;&gt;GUI управления программами&lt;br&gt;(загрузка, сохранение,&lt;br&gt;удаление, запуск)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.8;arcSize=8;fontFamily=Arial;fontSize=14;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="590" width="260" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;b&gt;&lt;font color=&quot;#6f2dbd&quot;&gt;Роли модулей&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;• Модели и кинематика&lt;br&gt;• Управление движением&lt;br&gt;• Управление захватом&lt;br&gt;• Выполнение программ&lt;br&gt;• Пользовательский интерфейс&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.5;dashed=1;dashPattern=7 5;fontFamily=Arial;fontSize=13;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="875" y="585" width="210" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="19" target="20">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="20" target="21">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="21" target="22">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="23" target="24">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="24" target="25">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="25" target="26">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="36" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="19" target="23">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="20" target="24">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="38" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="21" target="25">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="22" target="26">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="23" target="27">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontFamily=Arial;fontSize=13;" edge="1" parent="1" source="25" target="28">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" value="" style="endArrow=block;startArrow=block;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="27" target="28">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" value="ВНЕШНИЕ ИНТЕРФЕЙСЫ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=18;fontColor=#128a22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="650" width="330" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="44" value="&lt;b&gt;&lt;font color=&quot;#128a22&quot;&gt;GUI Ручное управление&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:13px&quot;&gt;телеметрия,&lt;br&gt;статусы,&lt;br&gt;команды&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#128a22;strokeWidth=1.8;fontFamily=Arial;fontSize=13;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="30" y="700" width="145" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="45" value="🎮" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="42" y="735" width="38" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="46" value="&lt;b&gt;&lt;font color=&quot;#128a22&quot;&gt;GUI Редактор программ&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:13px&quot;&gt;создание&lt;br&gt;программ&lt;br&gt;сохранение&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#128a22;strokeWidth=1.8;fontFamily=Arial;fontSize=13;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="190" y="700" width="145" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="47" value="⌨" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="202" y="735" width="38" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="48" value="&lt;b&gt;&lt;font color=&quot;#128a22&quot;&gt;GUI Управление программами&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:13px&quot;&gt;загрузка,&lt;br&gt;удаление&lt;br&gt;запуск&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#128a22;strokeWidth=1.8;fontFamily=Arial;fontSize=13;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="360" y="700" width="145" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="49" value="▤" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="372" y="735" width="38" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="50" value="&lt;b&gt;&lt;font color=&quot;#128a22&quot;&gt;Джойстик / Кнопки&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:13px&quot;&gt;управление&lt;br&gt;в реальном&lt;br&gt;времени&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#128a22;strokeWidth=1.8;fontFamily=Arial;fontSize=13;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="560" y="700" width="145" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="51" value="🕹" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="572" y="735" width="38" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" value="&lt;b&gt;&lt;font color=&quot;#128a22&quot;&gt;ROS 2 Topics / Services&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:13px&quot;&gt;ROS 2&lt;br&gt;коммуникация&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#128a22;strokeWidth=1.8;fontFamily=Arial;fontSize=13;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="760" y="700" width="170" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" value="●●2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="772" y="735" width="38" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="54" value="&lt;b&gt;&lt;font color=&quot;#128a22&quot;&gt;ros2_control Hardware&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:13px&quot;&gt;драйверы,&lt;br&gt;энкодеры,&lt;br&gt;двигатели&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#128a22;strokeWidth=1.8;fontFamily=Arial;fontSize=13;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="970" y="700" width="170" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="55" value="▣" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="982" y="735" width="38" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="56" value="" style="shape=point;perimeter=ellipsePerimeter;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="690" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="57" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#128a22;strokeWidth=2;" edge="1" parent="1" source="56" target="23">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="58" value="" style="shape=point;perimeter=ellipsePerimeter;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="690" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="59" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#128a22;strokeWidth=2;" edge="1" parent="1" source="58" target="27">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="60" value="" style="shape=point;perimeter=ellipsePerimeter;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="690" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="61" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#128a22;strokeWidth=2;" edge="1" parent="1" source="60" target="28">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="62" value="" style="shape=point;perimeter=ellipsePerimeter;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="635" y="690" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="63" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#128a22;strokeWidth=2;" edge="1" parent="1" source="62" target="26">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="64" value="" style="shape=point;perimeter=ellipsePerimeter;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="845" y="690" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="65" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#128a22;strokeWidth=2;" edge="1" parent="1" source="64" target="20">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="66" value="" style="shape=point;perimeter=ellipsePerimeter;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1055" y="690" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="67" value="" style="endArrow=block;html=1;rounded=0;strokeColor=#128a22;strokeWidth=2;" edge="1" parent="1" source="66" target="22">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="68" value="КАК СДЕЛАТЬ В КОМПАС 2D" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=18;fontColor=#0b4db3;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="75" width="300" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="69" value="1. Создай новый чертёж (Файл → Создать → Чертёж).&lt;br&gt;2. Настрой формат A3, ориентация — горизонтальная.&lt;br&gt;3. Включи слои (Сервис → Менеджер слоёв):&lt;br&gt;&amp;nbsp;&amp;nbsp;— Уровни_системы — синий&lt;br&gt;&amp;nbsp;&amp;nbsp;— Модули_пакета — фиолетовый&lt;br&gt;&amp;nbsp;&amp;nbsp;— Интерфейсы — зелёный&lt;br&gt;&amp;nbsp;&amp;nbsp;— Потоки_данных — чёрный&lt;br&gt;&amp;nbsp;&amp;nbsp;— Команды_управления — красный&lt;br&gt;&amp;nbsp;&amp;nbsp;— Обратная_связь — синий пунктир&lt;br&gt;&amp;nbsp;&amp;nbsp;— Вспомогательные — серый (штрих-пунктир)&lt;br&gt;&lt;br&gt;4. Построй верхний уровень (4 блока: 1–4).&lt;br&gt;5. Соедини блоки стрелками потоков данных и команд.&lt;br&gt;6. Построй внутреннюю структуру пакета robot_arm_controller&lt;br&gt;&amp;nbsp;&amp;nbsp;(блоки 4.1–4.10).&lt;br&gt;7. Соедини модули между собой стрелками.&lt;br&gt;8. Построй блок «Роли модулей».&lt;br&gt;9. Построй нижний блок «Внешние интерфейсы».&lt;br&gt;10. Соедини интерфейсы с системой (зелёные стрелки).&lt;br&gt;11. Добавь иконки (ROS, Python, Gazebo, джойстик и др.).&lt;br&gt;12. Оформи рамки, заголовки и подписи." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="115" width="335" height="410" as="geometry"/>
+        </mxCell>
+        <mxCell id="70" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0b4db3;strokeWidth=2;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="625" width="335" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="71" value="УСЛОВНЫЕ ОБОЗНАЧЕНИЯ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=16;fontColor=#0b4db3;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="628" width="245" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="72" value="" style="shape=table;startSize=24;container=0;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;columnLines=1;whiteSpace=wrap;html=1;strokeColor=#0b4db3;fillColor=#ffffff;fontFamily=Arial;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="660" width="300" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="73" value="Обозначение" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1262" y="665" width="120" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="74" value="Описание" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1385" y="665" width="170" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="75" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1268" y="696" width="70" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="76" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1348" y="696" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="77" value="" style="endArrow=block;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="75" target="76">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="78" value="Передача данных" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="681" width="175" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="79" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1268" y="724" width="70" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="80" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1348" y="724" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="81" value="" style="endArrow=block;html=1;strokeColor=#ff0000;strokeWidth=2;" edge="1" parent="1" source="79" target="80">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="82" value="Команды управления" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="709" width="175" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="83" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1268" y="752" width="70" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="84" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1348" y="752" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="85" value="" style="endArrow=block;html=1;strokeColor=#0047ff;strokeWidth=2;dashed=1;dashPattern=8 4;" edge="1" parent="1" source="83" target="84">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="86" value="Обратная связь / статусы" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="737" width="175" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="87" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6f2dbd;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1288" y="770" width="45" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="88" value="Программный модуль / пакет" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="765" width="175" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="89" value="②" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Arial;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1298" y="794" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="90" value="Номер модуля" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="793" width="175" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="91" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1268" y="836" width="70" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="92" value="" style="shape=point;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="1348" y="836" width="1" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="93" value="" style="endArrow=block;html=1;strokeColor=#128a22;strokeWidth=2;" edge="1" parent="1" source="91" target="92">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="94" value="Интерфейс пользователя / внешнее взаимодействие" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="821" width="175" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="95" value="ЧТО ДОЛЖНО ПОЛУЧИТЬСЯ" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=16;fontColor=#0b4db3;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="805" width="280" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="96" value="Схема должна отражать архитектуру системы управления роботом:&lt;br&gt;верхний уровень взаимодействия компонентов ROS 2 и Gazebo, внутреннюю структуру&lt;br&gt;управляющего пакета robot_arm_controller и внешние интерфейсы пользователя." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="35" y="835" width="620" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="97" value="КУДА ВСТАВИТЬ В ДИПЛОМ" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=16;fontColor=#0b4db3;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="805" width="330" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="98" value="Глава 1.6 — Программная архитектура системы управления роботом&lt;br&gt;(или раздел «Описание программного обеспечения»)." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="800" y="835" width="620" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
